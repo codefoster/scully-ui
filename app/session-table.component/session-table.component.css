@@ -1,0 +1,15 @@
+table {
+    margin:20px;
+}
+
+table > thead, table > tr {
+    font-size:16px;
+}
+
+table > thead {
+    font-weight:bold;
+}
+
+table > thead > td:first-child {
+    width:200px;
+}

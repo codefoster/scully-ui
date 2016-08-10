@@ -3,12 +3,12 @@ import { MD_TABS_DIRECTIVES } from "@angular2-material/tabs";
 
 @Component({
     moduleId: module.id,
-    selector: "race",
-    templateUrl: "race.component.html",
-    styleUrls:["race.component.css"],
+    selector: "session",
+    templateUrl: "session.component.html",
+    styleUrls:["session.component.css"],
     directives: [MD_TABS_DIRECTIVES]
 })
-export class RaceComponent {
+export class SessionComponent {
     constructor() {
     }
 }

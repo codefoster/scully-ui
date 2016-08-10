@@ -29,7 +29,7 @@
         // import the spec file explicitly
         // wait for all imports to load... then execute window.onload to trigger test runner
         Promise.all([
-            System.import('app/race.service/race.service.spec')
+            System.import('app/session.service/session.service.spec')
             //put more specs here
         ])
             .then(window.onload)

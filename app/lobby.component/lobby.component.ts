@@ -17,7 +17,7 @@ export class LobbyComponent implements OnInit {
     ngOnInit() { 
     }
 
-    race() {
-        // this.router.navigate(['/race']);
+    start() {
+        // this.router.navigate(['/session']);
     }
 }

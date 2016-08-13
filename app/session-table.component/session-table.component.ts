@@ -1,10 +1,9 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-    moduleId: module.id,
     selector: "session-table",
-    templateUrl: "session-table.component.html",
-    styleUrls:["session-table.component.css"]
+    templateUrl: "app/session-table.component/session-table.component.html",
+    styleUrls:["app/session-table.component/session-table.component.css"]
 })
 export class SessionTableComponent implements OnInit{
     @Input()
@@ -13,7 +12,7 @@ export class SessionTableComponent implements OnInit{
     constructor() {
     }
 
-    OnInit() {
+    ngOnInit() {
 
     }
 }

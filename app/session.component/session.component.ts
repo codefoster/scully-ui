@@ -4,10 +4,9 @@ import { SessionTableComponent } from '../session-table.component/session-table.
 import { VisualComponent } from '../visual.component/visual.component';
 
 @Component({
-    moduleId: module.id,
     selector: "session",
-    templateUrl: "session.component.html",
-    styleUrls:["session.component.css"],
+    templateUrl: "app/session.component/session.component.html",
+    styleUrls:["app/session.component/session.component.css"],
     directives: [MD_TABS_DIRECTIVES, SessionTableComponent, VisualComponent]
 })
 export class SessionComponent {

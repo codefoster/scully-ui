@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'visual',
-    templateUrl: 'visual.component.html',
-    styleUrls: ['visual.component.css']
+    templateUrl: 'app/visual.component/visual.component.html',
+    styleUrls: ['app/visual.component/visual.component.css']
 })
 export class VisualComponent implements OnInit {
     constructor() { }

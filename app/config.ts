@@ -1,3 +1,3 @@
-export class Config {
-    public socketServerUrl: string = "http://localhost:8080";
+export default {
+    serviceUrl: 'http://localhost:8080'
 }

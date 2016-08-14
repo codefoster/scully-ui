@@ -1,6 +1,7 @@
 {
     "files.exclude": {
         "app/**/*.js": true,
+        "socketjs.config.js": false,
         "app/**/*.js.map": true
 	}
 }

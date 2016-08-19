@@ -12,3 +12,12 @@
     </template>
   </md-tab>
 </md-tab-group>
+
+Session status: {{ api.session.status }}<br/>
+
+<button md-raised-button (click)="api.start()" [color]="'primary'" >
+    START
+</button>
+<button md-raised-button (click)="api.end()" [color]="'warn'" >
+    END
+</button>

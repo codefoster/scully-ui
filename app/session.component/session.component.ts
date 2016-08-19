@@ -13,18 +13,9 @@ import { ApiService } from '../api.service/api.service';
     directives: [MD_BUTTON_DIRECTIVES, MD_TABS_DIRECTIVES, SessionTableComponent, VisualComponent]
 })
 export class SessionComponent implements OnInit{
-    rowers = [
-        { Name:"Rower 1", Distance:45 },
-        { Name:"Rower 2", Distance:52 },
-        { Name:"Rower 3", Distance:46 }
-    ];
-    
     constructor(private api:ApiService) {
-        
     }
 
     ngOnInit() {
-        
     }
 }
-

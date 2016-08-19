@@ -1,7 +1,7 @@
 export class Session {
     status: string = 'idle';
     rowers: Rower[] = [
-        { name: 'jeremy' }
+        { name: 'jeremy', distance: 0 }
     ];
 
     start() {
@@ -15,4 +15,5 @@ export class Session {
 
 export class Rower {
     name:string;
+    distance:number;
 }

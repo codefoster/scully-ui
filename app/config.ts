@@ -1,3 +1,3 @@
 export default {
-    serviceUrl: 'http://regatta-api.azurewebsites.net'
+    serviceUrl: 'http://localhost:8080'
 }

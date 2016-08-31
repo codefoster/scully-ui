@@ -1,7 +1,6 @@
 export class Session {
     status: string = 'idle';
     rowers: Rower[] = [
-        { name: 'jeremy', distance: 0 }
     ];
 
     start() {

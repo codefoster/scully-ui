@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import config from '../config';
 import { Http } from '@angular/http';
-import * as find from 'lodash/find';
 import { Session, Rower } from '../models';
 import * as socketio from 'socket.io-client';
 
@@ -24,7 +23,7 @@ export class ApiService {
                     break;
                 case 'rower-change':
                     let rower = this.session.rowers.find(r => r.name == d.rower.name);
-                    if(rower) rower.distance = d.rower.distance;
+                    if(rower) rower = d.rower;
                     break;
             }
         });

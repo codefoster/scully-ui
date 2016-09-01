@@ -22,12 +22,12 @@ export class ApiService {
                     this.session = d.session;
                     break;
                 case 'rower-change':
-                    let rower = this.session.rowers.find(r => r.name == d.rower.name);
-                    if(rower) rower = d.rower;
+                    let i = this.session.rowers.findIndex(r => r.name == d.rower.name);
+                    if(i > -1) this.session.rowers[i] = d.rower;
                     break;
             }
         });
-    }
+    } 
 
     fetch() {
         this.http.get(this.apiUrl + '/session')

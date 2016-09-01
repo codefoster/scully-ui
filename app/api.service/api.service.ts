@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import config from '../config';
 import { Http } from '@angular/http';
+import * as find from 'lodash/find';
 import { Session, Rower } from '../models';
 import * as socketio from 'socket.io-client';
 
@@ -17,7 +18,15 @@ export class ApiService {
         //stream all messages into our Rx Subject
         this.socket.on("message", d => {
             //handle socket messages
-
+            switch(d.message) {
+                case 'session-change':
+                    this.session = d.session;
+                    break;
+                case 'rower-change':
+                    let rower = _.find(this.session.rowers, {name:d.rower.name});
+                    rower = d.rower;
+                    break;
+            }
         });
     }
 

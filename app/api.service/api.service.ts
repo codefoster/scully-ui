@@ -23,8 +23,8 @@ export class ApiService {
                     this.session = d.session;
                     break;
                 case 'rower-change':
-                    let rower = _.find(this.session.rowers, {name:d.rower.name});
-                    rower = d.rower;
+                    let rower = this.session.rowers.find(r => r.name == d.rower.name);
+                    if(rower) rower.distance = d.rower.distance;
                     break;
             }
         });

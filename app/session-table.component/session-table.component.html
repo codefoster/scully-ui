@@ -2,9 +2,15 @@
     <thead>
         <td>Name</td>
         <td>Distance</td>
+        <td>Speed</td>
+        <td>Average Speed</td>
+        <td>Power</td>
     </thead>
     <tr *ngFor="let r of rowers">
         <td>{{ r.name }}</td>
         <td>{{ r.distance }}</td>
+        <td>{{ r.speed }}</td>
+        <td>{{ r.averageSpeed }}</td>
+        <td>{{ r.power }}</td>
     </tr>
 </table>

@@ -10,6 +10,7 @@ table > thead {
     font-weight:bold;
 }
 
-table > thead > td:first-child {
-    width:200px;
-}
+table > thead > td:first-child { width:200px; }
+table > thead > td:nth-child(2) { width:200px; }
+table > thead > td:nth-child(3) { width:200px; }
+table > thead > td:nth-child(4) { width:200px; }

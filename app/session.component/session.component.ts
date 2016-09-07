@@ -17,5 +17,6 @@ export class SessionComponent implements OnInit{
     }
 
     ngOnInit() {
+        this.api.fetch();
     }
 }

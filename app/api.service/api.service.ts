@@ -17,17 +17,17 @@ export class ApiService {
         //stream all messages into our Rx Subject
         this.socket.on("message", d => {
             //handle socket messages
-            switch(d.message) {
+            switch (d.message) {
                 case 'session-change':
                     this.session = d.session;
                     break;
                 case 'rower-change':
                     let i = this.session.rowers.findIndex(r => r.name == d.rower.name);
-                    if(i > -1) this.session.rowers[i] = d.rower;
+                    if (i > -1) this.session.rowers[i] = d.rower;
                     break;
             }
         });
-    } 
+    }
 
     fetch() {
         this.http.get(this.apiUrl + '/session')
@@ -35,12 +35,13 @@ export class ApiService {
     }
 
     start() {
+        // we can fire and forget this because it will trigger a session-change socket message and we (the UI) will be updated accordingly
         this.http.post(this.apiUrl + '/session/start', null)
-            .subscribe(() => this.fetch(), err => console.error(`Error starting session. ${err}`));
+            .subscribe({ error: err => console.error(`Error starting session. ${err}`) });
     }
 
     end() {
         this.http.post(this.apiUrl + '/session/end', null)
-            .subscribe(() => this.fetch(), err => console.error(`Error ending session. ${err}`));
+            .subscribe({ error: err => console.error(`Error ending session. ${err}`) });
     }
 }

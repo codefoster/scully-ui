@@ -37,3 +37,4 @@ node_modules
 **/*.js
 **/*.js.map
 !systemjs.config.js
+.vscode/settings.json

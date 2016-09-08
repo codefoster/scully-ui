@@ -13,9 +13,25 @@ import { ApiService } from '../api.service/api.service';
     directives: [MD_BUTTON_DIRECTIVES, MD_TABS_DIRECTIVES, SessionTableComponent, VisualComponent]
 })
 export class SessionComponent implements OnInit{
+    index: number = 0; 
+
     constructor(private api:ApiService) {
     }
 
     ngOnInit() {
+    }
+
+    cycleTabs(event) { 
+        if (event.keyCode == '37') { 
+            this.index--; 
+        }else if (event.keyCode == '39'){
+            this.index++; 
+        }
+
+        if (this.index > 1){
+            this.index = 0; 
+        }else if (this.index < 0){
+            this.index = 1; 
+        }
     }
 }

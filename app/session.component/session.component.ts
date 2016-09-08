@@ -21,11 +21,15 @@ export class SessionComponent implements OnInit{
     ngOnInit() {
     }
 
-    cycleTabs(event) { 
-        if (event.keyCode == '37') { 
-            this.index--; 
-        }else if (event.keyCode == '39'){
-            this.index++; 
+    handleKeypress(event) { 
+        
+        switch(event.key) {
+            case "Right":
+                this.index++; 
+                break; 
+            case "Left":
+                this.index--; 
+                break; 
         }
 
         if (this.index > 1){

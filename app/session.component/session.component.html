@@ -13,7 +13,7 @@
   </md-tab>
 </md-tab-group>
 
-<div (window:keydown)="cycleTabs($event)"></div>
+<div (window:keydown)="handleKeypress($event)"></div>
 
 Session status: {{ api.session.status }}<br/>
 

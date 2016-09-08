@@ -1,4 +1,4 @@
-<md-tab-group>
+<md-tab-group [(selectedIndex)]="selectedIndex">
   <md-tab>
     <template md-tab-label>Data</template>
     <template md-tab-content>
@@ -12,6 +12,8 @@
     </template>
   </md-tab>
 </md-tab-group>
+
+<div (window:keydown)="selectedIndex = 0">Toggle Div<div> 
 
 Session status: {{ api.session.status }}<br/>
 

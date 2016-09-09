@@ -1,4 +1,4 @@
-<md-tab-group>
+<md-tab-group [selectedIndex]="index">
   <md-tab>
     <template md-tab-label>Data</template>
     <template md-tab-content>
@@ -12,6 +12,8 @@
     </template>
   </md-tab>
 </md-tab-group>
+
+<div (window:keydown)="handleKeypress($event)"></div>
 
 Session status: {{ api.session.status }}<br/>
 

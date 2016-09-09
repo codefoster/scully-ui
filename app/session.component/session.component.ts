@@ -13,10 +13,24 @@ import { ApiService } from '../api.service/api.service';
     directives: [MD_BUTTON_DIRECTIVES, MD_TABS_DIRECTIVES, SessionTableComponent, VisualComponent]
 })
 export class SessionComponent implements OnInit{
+    index: number = 0; 
+    TAB_COUNT: number = 2;
+
     constructor(private api:ApiService) {
     }
 
     ngOnInit() {
         this.api.fetch();
+    }
+
+    handleKeypress(event) { 
+        switch(event.key) {
+            case "Right":
+                this.index = Math.min(this.index + 1, this.TAB_COUNT - 1);
+                break; 
+            case "Left":
+                this.index = Math.max(this.index - 1, 0);
+                break; 
+        }
     }
 }

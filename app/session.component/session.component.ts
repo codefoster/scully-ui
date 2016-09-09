@@ -14,6 +14,7 @@ import { ApiService } from '../api.service/api.service';
 })
 export class SessionComponent implements OnInit{
     index: number = 0; 
+    TAB_COUNT: number = 2;
 
     constructor(private api:ApiService) {
     }
@@ -23,20 +24,13 @@ export class SessionComponent implements OnInit{
     }
 
     handleKeypress(event) { 
-        
         switch(event.key) {
             case "Right":
-                this.index++; 
+                this.index = Math.min(this.index + 1, this.TAB_COUNT - 1);
                 break; 
             case "Left":
-                this.index--; 
+                this.index = Math.max(this.index - 1, 0);
                 break; 
-        }
-
-        if (this.index > 1){
-            this.index = 0; 
-        }else if (this.index < 0){
-            this.index = 1; 
         }
     }
 }

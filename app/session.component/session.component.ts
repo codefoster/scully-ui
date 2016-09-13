@@ -31,6 +31,8 @@ export class SessionComponent implements OnInit{
             case "Left":
                 this.index = Math.max(this.index - 1, 0);
                 break; 
+            case "Space":
+                (this.api.session.status == 'active' ? this.api.session.end() : this.api.session.start())
         }
     }
 }

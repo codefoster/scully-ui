@@ -22,8 +22,13 @@ export class ApiService {
                     this.session = d.session;
                     break;
                 case 'rower-change':
+                    //update meta properties
+                    d.rower.isFinished = d.rower.distance >= this.session.distance;
+
+                    //update the local rower
                     let i = this.session.rowers.findIndex(r => r.name == d.rower.name);
                     if (i > -1) this.session.rowers[i] = d.rower;
+
                     break;
             }
         });

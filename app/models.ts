@@ -1,9 +1,11 @@
 export class Session {
     status: string = 'idle';
+    distance: number = 500; //meters
     rowers: Rower[] = [
     ];
 
-    start() {
+    start(distance?:number) {
+        if(distance) this.distance = distance;
         this.status = 'active';
     }
 

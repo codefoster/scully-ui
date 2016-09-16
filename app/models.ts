@@ -1,8 +1,7 @@
 export class Session {
     status: string = 'idle';
-    distance: number = 500; //meters
-    rowers: Rower[] = [
-    ];
+    distance: number; //meters
+    rowers: Rower[] = [];
 
     start(distance?:number) {
         if(distance) this.distance = distance;

@@ -37,11 +37,17 @@ export class ApiService {
     start() {
         // we can fire and forget this because it will trigger a session-change socket message and we (the UI) will be updated accordingly
         this.http.post(this.apiUrl + '/session/start', null)
-            .subscribe({ error: err => console.error(`Error starting session. ${err}`) });
+            .subscribe({
+                next: () => this.socket.send({ message: 'session-start', distance: 150 }),
+                error: err => console.error(`Error starting session. ${err}`)
+            });
     }
 
     end() {
         this.http.post(this.apiUrl + '/session/end', null)
-            .subscribe({ error: err => console.error(`Error ending session. ${err}`) });
+            .subscribe({
+                next: () => this.socket.send({ message: 'session-end', distance: 150 }),
+                error: err => console.error(`Error ending session. ${err}`)
+            });
     }
 }

@@ -15,8 +15,6 @@
 
 <div (window:keydown)="handleKeypress($event)"></div>
 
-Session status: {{ api.session.status }}<br/>
-
 <button md-raised-button
   (click)="(api.session.status == 'active' ? api.end() : api.start())"
   [color]="(api.session.status == 'active' ? 'warn' : 'primary')"

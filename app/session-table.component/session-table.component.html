@@ -6,7 +6,7 @@
         <td>Average Speed</td>
         <td>Power</td>
     </thead>
-    <tr *ngFor="let r of rowers">
+    <tr *ngFor="let r of rowers" [class.finished]="r.isFinished">
         <td>{{ r.name }}</td>
         <td>{{ r.distance }}</td>
         <td>{{ r.speed }}</td>

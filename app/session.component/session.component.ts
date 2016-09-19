@@ -1,6 +1,7 @@
 import { Component, provide, OnInit } from "@angular/core";
 import { MD_TABS_DIRECTIVES } from "@angular2-material/tabs";
 import { MD_BUTTON_DIRECTIVES } from "@angular2-material/button";
+import {MD_PROGRESS_BAR_DIRECTIVES} from '@angular2-material/progress-bar';
 import { SessionTableComponent } from '../session-table.component/session-table.component';
 import { VisualComponent } from '../visual.component/visual.component';
 import { ApiService } from '../api.service/api.service';
@@ -10,13 +11,20 @@ import { ApiService } from '../api.service/api.service';
     templateUrl: "app/session.component/session.component.html",
     styleUrls:["app/session.component/session.component.css"],
     providers:[ApiService],
-    directives: [MD_BUTTON_DIRECTIVES, MD_TABS_DIRECTIVES, SessionTableComponent, VisualComponent]
+    directives: [MD_BUTTON_DIRECTIVES, MD_TABS_DIRECTIVES, MD_PROGRESS_BAR_DIRECTIVES, SessionTableComponent, VisualComponent]
 })
 export class SessionComponent implements OnInit{
     index: number = 0; 
     TAB_COUNT: number = 2;
 
+    progress: number = 0; 
+
     constructor(private api:ApiService) {
+
+        // UPdate the value for the progress-bar on an interval. 
+        setInterval(() => {
+            this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100; 
+        }, 200);
     }
 
     ngOnInit() {

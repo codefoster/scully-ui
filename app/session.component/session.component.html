@@ -21,3 +21,16 @@
   [disabled]="(api.session.rowers.length == 0)" >
     {{ (api.session.status == 'active' ? 'END' : 'START') }}
 </button>
+
+
+<md-card>
+  <label>
+    Determinate Progress bar - {{progress}}%
+    <md-progress-bar
+      class="app-progress"
+      color="accent"
+      mode="determinate"
+      [value]="progress"
+      aria-label="Determinate progress-bar example"></md-progress-bar>
+  </label>
+</md-card>

@@ -1,3 +1,9 @@
+<md-toolbar 
+[color]="(api.session.status == 'active' ? 'primary' : 'accent')">
+  <span>
+    {{ (api.session.status == 'active' ? 'Session began' : 'Click start to begin a session.') }}
+  </span>
+</md-toolbar>
 <md-tab-group [selectedIndex]="index">
   <md-tab>
     <template md-tab-label>Data</template>
@@ -22,8 +28,8 @@
     {{ (api.session.status == 'active' ? 'END' : 'START') }}
 </button>
 
-
-<md-card>
+<!--Commented out progress bar temporarily-->
+<!--<md-card>
   <label>
     Determinate Progress bar - {{progress}}%
     <md-progress-bar
@@ -33,4 +39,4 @@
       [value]="progress"
       aria-label="Determinate progress-bar example"></md-progress-bar>
   </label>
-</md-card>
+</md-card>-->

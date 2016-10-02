@@ -1,8 +1,15 @@
 <md-toolbar 
 [color]="(api.session.status == 'active' ? 'primary' : 'accent')">
-  <span>
-    {{ (api.session.status == 'active' ? 'Session began' : 'Click start to begin a session.') }}
+  <span id="toolbar">
+    {{ (api.session.status == 'active' ? 'Session began ' + date : 'Click start to begin a new session.') }}
   </span>
+  <span class="fill-remaining-space"></span>
+  <button md-raised-button
+  (click)="(api.session.status == 'active' ? api.end() : countdownStart())"
+  [color]="(api.session.status == 'active' ? 'warn' : 'primary')" >
+  <!--[disabled]="(api.session.rowers.length == 0)" >-->
+    {{ (api.session.status == 'active' ? 'END' : 'START') }}
+</button>
 </md-toolbar>
 <md-tab-group [selectedIndex]="index">
   <md-tab>
@@ -20,13 +27,7 @@
 </md-tab-group>
 
 <div (window:keydown)="handleKeypress($event)"></div>
-
-<button md-raised-button
-  (click)="(api.session.status == 'active' ? api.end() : api.start())"
-  [color]="(api.session.status == 'active' ? 'warn' : 'primary')"
-  [disabled]="(api.session.rowers.length == 0)" >
-    {{ (api.session.status == 'active' ? 'END' : 'START') }}
-</button>
+<div id="countdown"></div>
 
 <!--Commented out progress bar temporarily-->
 <!--<md-card>

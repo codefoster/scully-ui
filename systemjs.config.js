@@ -34,6 +34,16 @@
             format: 'cjs',
             defaultExtension: 'js',
             main: 'tabs.js'
+        },
+        '@angular2-material/progress-bar': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'progress-bar.js'
+        },
+        '@angular2-material/toolbar': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'toolbar.js'
         }
     };
 

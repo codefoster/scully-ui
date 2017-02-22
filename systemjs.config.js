@@ -6,7 +6,7 @@
         'rxjs': 'node_modules/rxjs',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         '@angular': 'node_modules/@angular',
-        "socket.io-client": "./node_modules/socket.io-client/socket.io.js",
+        "socket.io-client": "./node_modules/socket.io-client/dist/socket.io.js",
         "@angular2-material":"./node_modules/@angular2-material"
     };
 

@@ -38,11 +38,10 @@
     "typescript": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^4.0.30",
+    "@types/node": "^7",
     "@types/socket.io-client": "^1.4.26",
-    "concurrently": "^2.0.0",
+    "concurrently": "^3",
     "jasmine-core": "2.4.1",
-    "lite-server": "^2.2.0",
-    "typings": "^2"
+    "lite-server": "^2.2.0"
   }
 }

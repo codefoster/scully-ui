@@ -35,7 +35,7 @@
     "socket.io-client": "^1.7.3",
     "systemjs": "0.19.36",
     "zone.js": "0.6.12",
-    "typescript": "2.0.0"
+    "typescript": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^4.0.30",
@@ -43,6 +43,6 @@
     "concurrently": "^2.0.0",
     "jasmine-core": "2.4.1",
     "lite-server": "^2.2.0",
-    "typings": "^1"
+    "typings": "^2"
   }
 }

@@ -1,5 +1,5 @@
-#regatta-web
-This is the client-side Angular 2 site that will show a visualization of Regatta rowing sessions.
+#Overview
+This is the client-side Angular site that will show a visualization of Scully rowing sessions.
 
 #Getting Started
 ```

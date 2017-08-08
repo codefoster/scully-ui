@@ -8,6 +8,8 @@ import { SessionTableComponent } from './session-table/session-table.component';
 import { SessionComponent } from './session/session.component';
 import { VisualComponent } from './visual/visual.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdToolbarModule, MdTabsModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,11 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdToolbarModule,
+    MdTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

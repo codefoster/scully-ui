@@ -12,7 +12,7 @@ import { VisualComponent } from "../visual/visual.component";
 export class SessionComponent implements OnInit {
   index: number = 0;
   TAB_COUNT: number = 2;
-  //progress: number = 0; 
+  progress: number = 0; 
   timer;
   date;
   countdownindex: number = 3;

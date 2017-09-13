@@ -5,9 +5,8 @@ import { LobbyComponent } from './lobby/lobby.component';
 import { SessionComponent } from './session/session.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/lobby', pathMatch: 'full' },
+  { path: '**', component: LobbyComponent },
   { path: 'lobby', component: LobbyComponent },
-//   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'session', component: SessionComponent }
 ];
 

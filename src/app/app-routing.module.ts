@@ -5,9 +5,9 @@ import { LobbyComponent } from './lobby/lobby.component';
 import { SessionComponent } from './session/session.component';
 
 const routes: Routes = [
-  { path: '**', component: LobbyComponent },
   { path: 'lobby', component: LobbyComponent },
-  { path: 'session', component: SessionComponent }
+  { path: 'session', component: SessionComponent },
+  { path: '**', component: LobbyComponent }
 ];
 
 @NgModule({

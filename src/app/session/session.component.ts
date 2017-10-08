@@ -18,16 +18,12 @@ export class SessionComponent implements OnInit {
     countdownindex: number = 3;
 
     constructor(private api: ApiService) {
-        // Commented out progress bar temporarily.
-        // UPdate the value for the progress-bar on an interval. 
-        // setInterval(() => {
-        //     this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100; 
-        // }, 200);
 
     }
 
     ngOnInit() {
     }
+
     countdownStart() {
         this.timer = setInterval(() => this.countdown(), 1000);
     }

@@ -1,13 +1,12 @@
-<md-toolbar [color]="(api.session.status == 'active' ? 'primary' : 'accent')">
+<mat-toolbar [color]="(api.session.status == 'active' ? 'primary' : 'accent')">
     <span id="toolbar">
     {{ (api.session.status == 'active' ? 'Session began ' + date : 'Click start to begin a new session.') }}
   </span>
     <span class="fill-remaining-space"></span>
-    <button md-raised-button (click)="(api.session.status == 'active' ? api.end() : api.start())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
-        <!-- [disabled]="(api.session.rowers.length == 0)"> -->
+    <button mat-raised-button (click)="(api.session.status == 'active' ? end() : start())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
     {{ (api.session.status == 'active' ? 'END' : 'START') }}
 </button>
-</md-toolbar>
+</mat-toolbar>
 
 <session-table [rowers]="api.session.rowers"></session-table>
 <rower-list [rowers]="api.session.rowers"></rower-list>

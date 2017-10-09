@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import {
-    MdButtonModule,
-    MdToolbarModule,
-    MdTabsModule,
-    MdCardModule,
-    MdProgressBarModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatCardModule,
+    MatProgressBarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
-        MdButtonModule,
-        MdToolbarModule,
-        MdTabsModule,
-        MdCardModule,
-        MdProgressBarModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatTabsModule,
+        MatCardModule,
+        MatProgressBarModule,
         BrowserAnimationsModule
     ],
     exports: [
-        MdButtonModule,
-        MdToolbarModule,
-        MdTabsModule,
-        MdCardModule,
-        MdProgressBarModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatTabsModule,
+        MatCardModule,
+        MatProgressBarModule,
         BrowserAnimationsModule
     ],
 })

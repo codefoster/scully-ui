@@ -9,11 +9,21 @@ import { RowerListComponent } from "../rower-list/rower-list.component";
     styleUrls: ['./session.component.css']
 })
 export class SessionComponent implements OnInit {
-    constructor(private api: ApiService) {
+    date;
 
+    constructor(private api: ApiService) {
     }
 
     ngOnInit() {
+    }
+
+    start() {
+        this.date = new Date();
+        this.api.start();        
+    }
+
+    end() {
+        this.api.end();
     }
 
 }

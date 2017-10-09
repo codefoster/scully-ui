@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { RowerListComponent } from './rower-list/rower-list.component';
 import { ApiService } from "./api.service";
+import { RowerComponent } from './rower/rower.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ApiService } from "./api.service";
     LobbyComponent,
     SessionTableComponent,
     SessionComponent,
-    RowerListComponent
+    RowerListComponent,
+    RowerComponent
   ],
   imports: [
     BrowserModule,

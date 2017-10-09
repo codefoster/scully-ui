@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { LobbyComponent } from './lobby/lobby.component';
 import { SessionTableComponent } from './session-table/session-table.component';
 import { SessionComponent } from './session/session.component';
-import { VisualComponent } from './visual/visual.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { RowerListComponent } from './rower-list/rower-list.component';
+import { ApiService } from "./api.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { MaterialModule } from './material.module';
     LobbyComponent,
     SessionTableComponent,
     SessionComponent,
-    VisualComponent
+    RowerListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,7 @@ import { MaterialModule } from './material.module';
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VisualComponent } from './visual.component';
+import { RowerListComponent } from './rower-list.component';
 
-describe('VisualComponent', () => {
-  let component: VisualComponent;
-  let fixture: ComponentFixture<VisualComponent>;
+describe('RowerListComponent', () => {
+  let component: RowerListComponent;
+  let fixture: ComponentFixture<RowerListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VisualComponent ]
+      declarations: [ RowerListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VisualComponent);
+    fixture = TestBed.createComponent(RowerListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

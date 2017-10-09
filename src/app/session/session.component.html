@@ -3,25 +3,11 @@
     {{ (api.session.status == 'active' ? 'Session began ' + date : 'Click start to begin a new session.') }}
   </span>
     <span class="fill-remaining-space"></span>
-    <button md-raised-button (click)="(api.session.status == 'active' ? api.end() : countdownStart())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
-  <!--[disabled]="(api.session.rowers.length == 0)" >-->
+    <button md-raised-button (click)="(api.session.status == 'active' ? api.end() : api.start())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
+        <!-- [disabled]="(api.session.rowers.length == 0)"> -->
     {{ (api.session.status == 'active' ? 'END' : 'START') }}
 </button>
 </md-toolbar>
-<md-tab-group [selectedIndex]="index">
-    <md-tab>
-        <ng-template md-tab-label>Data</ng-template>
-        <ng-template md-tab-content>
-            <session-table [rowers]="api.session.rowers"></session-table>
-        </ng-template>
-    </md-tab>
-    <md-tab>
-        <ng-template md-tab-label>Visual</ng-template>
-        <ng-template md-tab-content>
-            <visual></visual>
-        </ng-template>
-    </md-tab>
-</md-tab-group>
 
-<div (window:keydown)="handleKeypress($event)"></div>
-<div id="countdown"></div>
+<session-table [rowers]="api.session.rowers"></session-table>
+<rower-list [rowers]="api.session.rowers"></rower-list>

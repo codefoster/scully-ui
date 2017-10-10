@@ -1,9 +1,8 @@
 :host {
-    display: flex;
-    flex-direction: column;
     min-width:100%;
 }
 
 .course {
     display: flex;
+    height:128px;
 }

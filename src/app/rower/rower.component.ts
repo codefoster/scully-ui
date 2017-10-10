@@ -8,6 +8,7 @@ import { Rower } from "../models";
 })
 export class RowerComponent implements OnInit {
   @Input() rower: Rower;
+  @Input() sessionDistance: Rower;
   constructor() { }
 
   ngOnInit() {

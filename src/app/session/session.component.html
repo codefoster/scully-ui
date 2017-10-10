@@ -11,11 +11,11 @@
       </button>
     </mat-card>
     <mat-card fxFlex>
-      <mat-nav-list>
-        <mat-list-item *ngFor="let r of api.session.rowers">
-          <rower [rower]="r"></rower>
-        </mat-list-item>
-      </mat-nav-list>
+      <div class="rower-list">
+        <div *ngFor="let r of api.session.rowers" style="height:160px">
+          <rower [rower]="r" [sessionDistance]="api.session.distance"></rower>
+        </div>
+      </div>
     </mat-card>
   </div>
 </div>

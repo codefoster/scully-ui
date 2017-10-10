@@ -1,6 +1,6 @@
 <h2>{{rower.name}}</h2>
 <div class="course">
     <div [style.flex]="rower.distance"></div>
-    <div><img [src]="'../../assets/' + getImageUrl(rower.name)"/></div>
+    <div><img [src]="'../../assets/' + getImageUrl(rower.name) + (rower.distance >= sessionDistance ? '-win' : '') + '.gif'"/></div>
     <div [style.flex]="sessionDistance - rower.distance"></div>
 </div>

@@ -16,11 +16,11 @@ export class RowerComponent implements OnInit {
   }
 
   getImageUrl(name:string) {
-    let result = "default.gif";
+    let result = "default";
     switch(name) {
-      case "John Papa": result = "papa.gif"; break;
-      case "Dan Wahlin": result = "wahlin.gif"; break;
-      case "Brad Green": result = "green.gif"; break;
+      case "John Papa": result = "papa"; break;
+      case "Dan Wahlin": result = "wahlin"; break;
+      case "Brad Green": result = "green"; break;
     }
     return result;
   }

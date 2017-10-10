@@ -1,12 +1,21 @@
-<mat-toolbar [color]="(api.session.status == 'active' ? 'primary' : 'accent')">
-    <span id="toolbar">
-    {{ (api.session.status == 'active' ? 'Session began ' + date : 'Click start to begin a new session.') }}
-  </span>
-    <span class="fill-remaining-space"></span>
-    <button mat-raised-button (click)="(api.session.status == 'active' ? end() : start())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
-    {{ (api.session.status == 'active' ? 'END' : 'START') }}
-</button>
-</mat-toolbar>
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
 
-<session-table [rowers]="api.session.rowers"></session-table>
-<rower-list [rowers]="api.session.rowers"></rower-list>
+  <mat-toolbar [color]="(api.session.status == 'active' ? 'primary' : 'accent')">
+    <h2 class="mat-title">Scully</h2>
+  </mat-toolbar>
+
+  <div fxLayout="row" fxLayoutGap="15px">
+    <mat-card fxFlex="20">
+      <button mat-raised-button (click)="(api.session.status == 'active' ? end() : start())" [color]="(api.session.status == 'active' ? 'warn' : 'primary')">
+        {{ (api.session.status == 'active' ? 'END' : 'START') }}
+      </button>
+    </mat-card>
+    <mat-card fxFlex>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let r of api.session.rowers">
+          <rower [rower]="r"></rower>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-card>
+  </div>
+</div>

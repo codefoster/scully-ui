@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import {
     MatButtonModule,
     MatToolbarModule,
-    MatTabsModule,
-    MatCardModule,
-    MatProgressBarModule
+    MatListModule,
+    MatCardModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,17 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     imports: [
         MatButtonModule,
         MatToolbarModule,
-        MatTabsModule,
         MatCardModule,
-        MatProgressBarModule,
         BrowserAnimationsModule
     ],
     exports: [
         MatButtonModule,
         MatToolbarModule,
-        MatTabsModule,
+        MatListModule,
         MatCardModule,
-        MatProgressBarModule,
         BrowserAnimationsModule
     ],
 })
